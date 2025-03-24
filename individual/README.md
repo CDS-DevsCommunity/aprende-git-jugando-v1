@@ -9,7 +9,6 @@ Este README.md está diseñado para ayudar a los participantes a iniciar su proy
 📌 Realizar la configuración para el proyecto que eligieron:
 
 ![alt text](./images_guia/image1.png)
-<br>
 
   💡 **Nota:** No es obligatorio seguir esta configuración exactamente. ¡Siéntete libre de personalizarla según tus necesidades!. 
 ### 3️⃣ Generar y Descargar el Proyecto
@@ -18,9 +17,12 @@ Este README.md está diseñado para ayudar a los participantes a iniciar su proy
 ### 4️⃣ Copiar el Archivo a tu Carpeta
 🔀 **Importante: Antes de continuar, asegúrate de estar en tu rama de Git correspondiente.**
 
+![alt text](./images_guia/image4.png)
+
 📂 Mueve el archivo .zip a la carpeta individual.
 
 ![alt text](./images_guia/image2.png)
+
 ### 5️⃣ Descomprimir el Archivo
 📦 Extrae el contenido del archivo .zip en la misma carpeta.
 
