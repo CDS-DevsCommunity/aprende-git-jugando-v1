@@ -1,16 +1,32 @@
-# aprende-git-jugando-v1
-## Bienvenido al repositorio de finalización del Taller Aprende Git Jugando V1
-### Summary
-- Los participantes de la primer versión del taller Aprende Git Jugando seguirán las indicaciones de trabajo en el repositorio para subir sus proyectos siguiendo las indicaciones que se fueron dando durante el taller.
-    - Paso a paso.
+# 🎮 Aprende Git Jugando - Versión 1
+## 🎉 Bienvenido al Repositorio del Taller
+Este repositorio es el espacio donde los participantes de la primera versión del taller "Aprende Git Jugando" subirán sus proyectos siguiendo lo aprendido en el taller.
 
-### Indicaciones para trabajar en el repositorio
-1. Crearse una rama con el siguiente formato: Nombre + "_" + "Inicial del apellido"
-2. Dentro de la carpeta individual, crear una carpeta donde estará tu proyecto con el mismo nombre de la rama
-3. En esa carpeta puedes iniciar a trabajar en tu proyecto
+___
+## 📌 Reglas para Trabajar en el Repositorio
+### 1️⃣ Crear una Rama Personal
+Cada participante debe crear una rama siguiendo este formato:
 
-### Ejemplo:
+    Nombre + "Inicial del apellido"
+
+**📌 Ejemplo:**
+
+- **Nombre: Diego Vargas**
+
+- **Rama:** <code>diegov</code>
+
+### 2️⃣ Crear una Carpeta para tu proyecto
+📂 Dentro de la carpeta <code>individual/</code>, crea una carpeta con el mismo nombre de tu rama.
+
+### 3️⃣ Iniciar tu Proyecto
+🚀 Guarda todo tu trabajo dentro de esa carpeta. ¡Aquí es donde desarrollarás tu proyecto!
+***
+
+### 🏗️ Ejemplo de Estructura del Repositorio
+
     aprende-git-jugando-v1/
-    ├── individual/                # Carpeta que contendrá los proyectos de cada participante
-    │   └── diego_v             # Carpeta del proyecto del participante 
-    └── Readme.md
+    ├── individual/             # Carpeta que contendrá los proyectos de cada participante
+    │   ├── imagenes_guia       # Imágenes para la guía de creación del proyecto en Spring Boot
+    │   ├── diegov/             # Carpeta ejemplo para el proyecto del participante 
+    │   └── README.md           # Guía para Crear un proyecto de Spring Boot
+    └── README.md               # Indicaciones del repositorio
