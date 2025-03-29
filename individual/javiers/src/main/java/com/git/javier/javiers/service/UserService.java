@@ -15,7 +15,7 @@ import java.util.Random;
 public class UserService {
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
-    private final EmailService emailService;
+    // private final EmailService emailService;
 
     public User registerUser(User user){
         if(userRepository.findByEmail(user.getEmail()).isPresent()) {

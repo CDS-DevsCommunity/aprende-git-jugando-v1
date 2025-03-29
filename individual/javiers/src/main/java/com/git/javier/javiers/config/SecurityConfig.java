@@ -38,11 +38,12 @@ public class SecurityConfig {
                         .requestMatchers("/").permitAll()
                         .requestMatchers("/images/**").permitAll()
                         .requestMatchers("/index.html").permitAll()
+                        .requestMatchers("api/auth/all").authenticated()
                         .requestMatchers("/api/auth/**").permitAll()
-                        .requestMatchers("api/auth/user/**").permitAll()  
+                       
                         .requestMatchers(HttpMethod.GET, "/api/products/**").permitAll()
                         .requestMatchers("/api/auth/change-password").authenticated()
-
+                        
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(session -> session

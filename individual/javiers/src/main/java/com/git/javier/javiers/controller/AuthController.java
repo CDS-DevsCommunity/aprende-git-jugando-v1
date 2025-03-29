@@ -84,7 +84,7 @@ public class AuthController {
     }
 
     //update
-    @GetMapping("/user")
+    @GetMapping("/all")
     public ResponseEntity<List<User>> getAllUsers() {
         List<User> users = userService.getAllUsers(); // Ensure this method exists in your UserService
         if (users.isEmpty()) {
@@ -93,7 +93,7 @@ public class AuthController {
         return ResponseEntity.ok(users); // Returns 200 with the list of users
     }
 
-    @DeleteMapping("/user/delete/{id}")
+    @DeleteMapping("/delete/{id}")
         public ResponseEntity<String> deleteUserById(@PathVariable Long id) {
             try {
                 userService.deleteUserById(id); // Asegúrate de que este método existe en UserService
