@@ -1,26 +1,25 @@
-package com.christian.spring.crud;
+package com.christian.spring.crud_usuario;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import entidad.Usuario;
-import repositorio.EstudianteRepositorio;
+import com.christian.spring.crud_usuario.entidad.Usuario;
+import com.christian.spring.crud_usuario.repositorio.EstudianteRepositorio;
 
 @SpringBootApplication
-public class CrudApplication implements CommandLineRunner {
+public class CrudUsuarioApplication implements CommandLineRunner {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CrudApplication.class, args);
+		SpringApplication.run(CrudUsuarioApplication.class, args);
 	}
 
 	@Autowired
 	private EstudianteRepositorio repositorio;
-
 	@Override
 	public void run(String... args) throws Exception {
-		Usuario usuario1 = new Usuario(1, "Christian", "Garcia", "ejemplo@gmail.com");	
+		Usuario usuario1 = new Usuario(null, "Christian", "Maldonado","ejemplo1@gmail.com");
 		repositorio.save(usuario1);
 
 		Usuario usuario2 = new Usuario("Vivian", "Flores","ejemplo2@gmail.com");	

@@ -1,4 +1,4 @@
-package entidad;
+package com.christian.spring.crud_usuario.entidad;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
