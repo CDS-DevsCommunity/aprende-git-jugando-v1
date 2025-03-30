@@ -3,7 +3,6 @@ package com.bryana.proyecto.controller;
 import com.bryana.proyecto.model.Image;
 import com.bryana.proyecto.repository.ImageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
 import org.springframework.http.ResponseEntity;
@@ -28,15 +27,34 @@ public class ImageController {
     @Autowired
     private ImageRepository imageRepository;
 
-    @Value("${file.upload-dir}")
-    private String uploadDir;
+    private String uploadDir = "uploads";
 
     // Subir imagen
     @PostMapping("/upload")
     public ResponseEntity<String> uploadImage(@RequestParam("file") MultipartFile file) {
         try {
-            // 1. Guardar el archivo en la carpeta 'uploads'
+
+            
+            //Guardar el archivo en la carpeta 'uploads'
             Path uploadPath = Paths.get(uploadDir);
+
+            // Crear la carpeta si no existe
+            if (!Files.exists(uploadPath)) {
+                Files.createDirectories(uploadPath);
+            }
+
+            if (!Files.isWritable(uploadPath)) {
+                return ResponseEntity.internalServerError()
+                    .body("No hay permisos de escritura en: " + uploadPath.toAbsolutePath());
+            }
+
+            // Verificar si el archivo está vacío
+            if (file.isEmpty()) {
+                return ResponseEntity.badRequest().body("Archivo vacío");
+            }
+
+
+            // Generar un nombre único para el archivo
             String fileName = System.currentTimeMillis() + "_" + file.getOriginalFilename();
             Path filePath = uploadPath.resolve(fileName);
             Files.copy(file.getInputStream(), filePath);
