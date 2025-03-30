@@ -13,12 +13,12 @@ public class prueba {
     private Integer edad;
     private String direccion;
 
-    private int user_id;
-    private string name_user;
     private boolean user_verificado;
 
     private string user_lastname;
     private int cantidad;
     private int dinero;
+
+    private string user_default;
 
 }
