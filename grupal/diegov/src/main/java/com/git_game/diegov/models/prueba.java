@@ -15,6 +15,10 @@ public class prueba {
 
     private boolean user_verificado;
 
+    private string user_lastname;
+    private int cantidad;
+    private int dinero;
+
     private string user_default;
 
 }
